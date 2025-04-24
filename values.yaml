@@ -1,0 +1,18 @@
+frontend:
+  image: nginx:latest
+  port: 80
+
+backend:
+  image: raviganeshm/simple-node-js-app
+  port: 5000
+
+database:
+  image: postgres:15
+  port: 5432
+  username: myuser
+  password: mypass
+  dbname: mydb
+
+ingress:
+  enabled: true
+  host: myapp.local
